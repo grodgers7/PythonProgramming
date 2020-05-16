@@ -18,5 +18,5 @@ print(type(greeeting))
 print(type(age))
 
 age_in_words = "30 years"
-print(name + " is " + age + " years old")
+print(name + f" is {age} years old")
 print(type(age))
