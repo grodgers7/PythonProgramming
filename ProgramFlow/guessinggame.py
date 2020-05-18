@@ -1,4 +1,7 @@
-answer = 5
+import random
+
+highest = 10
+answer = random.randint(1, highest)
 
 # print("Please guess a number between 1 and 10: ")
 # guess = int(input())
@@ -13,21 +16,32 @@ answer = 5
 # Adding a second guess
 print("What is your name? ")
 name = input()
-print("Hi {0}, please guess a number between 1 and 10: ".format(name))
-guess = int(input())
+# print(answer)       # TODO: Remove after testing
+guess = 0             # initialise to any number that wil not equal the answer
+print("Hi {0}, please guess a number between 1 and {1}: ".format(name, highest))
 
-if guess == answer:
-    print("You got it first time")
-else:
-    if guess < answer:
-        print("Please guess higher")
-    else:   # guess must be higher
-        print("Please guess lower")
+
+while guess != answer:
     guess = int(input())
+    if guess == 0:
+        break
+    # print("Please try again: ")
     if guess == answer:
         print("Well done, you guessed it")
+        break
     else:
-        print("Sorry, you have not guessed correctly")
+        if guess < answer:
+            print("Please guess higher")
+        else:   # guess must be higher
+            print("Please guess lower")
+        # guess = int(input())
+        # if guess == answer:
+        #     print("Well done, you guessed it")
+        # else:
+        #     print("Sorry, you have not guessed correctly")
+        if guess == 0:
+            print("Game Over")
+
 
 
 # if guess != answer:

@@ -28,4 +28,4 @@ print(anotherSplitString1)
 #r is for a raw string but the first method is preferable
 
 print("C:\\Users\\tgavinrodgers\\notes.txt")
-print(r"C:\Users\tgavinrodgers\notes.txt")
+print(r"C:\Users\gavinrodgers\notes.txt")
