@@ -14,16 +14,17 @@ exits = [{"Q": 0},
 
 loc = 1
 while True:
-    availableExits = ""
-    for direction in exits[loc].keys():
-        availableExits += dircetion + "'"
+    # using a join statement is better that trying to catenate strings in a loop (trailing comma)
+    availableExits = ", ".join(exits[loc].keys())
+    # for direction in exits[loc].keys():
+    #     availableExits += direction + ","
 
     print(locations[loc])
 
     if loc == 0:
         break
 
-    direction = input("Available exits are " + availableExits.upper())
+    direction = input("Available exits are " + availableExits + ": ").upper()
     print()
     if direction in exits[loc]:
         loc = exits[loc][direction]
